@@ -8,5 +8,6 @@ terraform {
 }
 
 provider "yandex" {
-  zone = var.default_zone
+  service_account_key_file = file(var.sa_key_file_path)
+  zone                     = var.default_zone
 }
